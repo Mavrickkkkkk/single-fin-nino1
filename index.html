@@ -1,0 +1,362 @@
+<!doctype html>
+<html lang="fr">
+
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Single Fin Coffee</title>
+  <meta name="description"
+    content="Single Fin : street food, poke bowls, bagels, fajitas. Menu en photos, infos, horaires, contact." />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500&family=Tenor+Sans&display=swap"
+    rel="stylesheet" />
+  <link rel="stylesheet" href="./styles.css" />
+  <link rel="icon" href="logo-single.ico" />
+</head>
+
+<body>
+
+  <!-- Background Canvas (Dark Starfield) -->
+  <div class="hero-bg-canvas">
+  </div>
+
+  <header class="header">
+    <div class="header__inner">
+      <!-- LEFR: Burger Placeholder -->
+      <div class="header__left">
+        <button class="menu-btn" id="burger">
+          <span></span><span></span><span></span>
+        </button>
+        <!-- Mobile Menu Dropdown -->
+        <nav id="mobileNav" class="mobile-nav">
+          <ul class="mobile-nav__list">
+            <li><a href="#menu" class="mobile-nav__link">I. MENU</a></li>
+            <li><a href="#events" class="mobile-nav__link">II. EVENEMENT A VENIR</a></li>
+            <li><a href="#contact" class="mobile-nav__link">III. LOCALISATION</a></li>
+            <li><a href="#merch" class="mobile-nav__link">IV. VETEMENTS</a></li>
+          </ul>
+        </nav>
+      </div>
+
+      <!-- CENTER: Brand -->
+      <a href="#" class="brand">
+        <div class="brand__logo"><img src="ChatGPT Image 6 mars 2026, 17_55_50.png" alt="Logo Single Fin" /></div>
+      </a>
+
+      <!-- RIGHT: Links -->
+      <div class="header__right">
+        <a class="nav-contact" href="https://www.royanatlantique.fr/webcam/royan-plage-de-pontaillac/"
+          target="_blank">SURF CAM</a>
+        <a class="nav-contact" href="https://www.surf-report.com/meteo-surf/royan-pontaillac-s1075.html"
+          target="_blank">SURF PREVISION</a>
+        <a class="nav-contact" href="#contact">CONTACT US</a>
+      </div>
+    </div>
+  </header>
+
+  <main>
+    <!-- HERO -->
+    <section class="hero">
+      <div class="container">
+        <div class="hero__content">
+          <h1 class="hero__title">
+            <span class="line1">Street Foods </span>
+            <span class="line2">Surfer's Vibes</span>
+            <span class="line3">Coffee / Bakery</span>
+          </h1>
+        </div>
+      </div>
+    </section>
+
+    <!-- FLOATING CTA -->
+    <a href="#menu" class="floating-cta">
+      <svg viewBox="0 0 150 150" class="rotating-text" id="cta-svg">
+        <path id="circlePath" d="M 75, 75 m -55, 0 a 55,55 0 1,1 110,0 a 55,55 0 1,1 -110,0" fill="transparent" />
+        <text>
+          <textPath id="cta-text-path" href="#circlePath" startOffset="0%"> DISCOVER MENU • DISCOVER MENU • </textPath>
+        </text>
+      </svg>
+      <div class="cta-board">
+        <img src="ChatGPT Image 6 mars 2026, 17_55_50.png" alt="Menu Icon">
+      </div>
+    </a>
+
+    <!-- INTRO SECTION -->
+    <section id="about" class="section intro-section">
+      <div class="container">
+        <div class="intro-centered-content">
+          <img src="good-food-good-vibes-transparent (2).png" alt="Good Food Good Vibes" class="intro-title-img">
+          <div class="stories-slider">
+            <!-- Story 1: DRINK -->
+            <div class="story-item" data-slider>
+              <span class="story-category">DRINK</span>
+              <div class="intro-img-wrapper slider-container">
+                <img src="photo café.png" alt="Latte" class="intro-img slider-img active">
+                <img src="burger_bowl.png" alt="Burger Bowl" class="intro-img slider-img">
+                <img src="café mauve.PNG" alt="Mauve Coffee" class="intro-img slider-img">
+              </div>
+            </div>
+
+            <!-- Story 2: FOOD -->
+            <div class="story-item" data-slider>
+              <span class="story-category">FOOD</span>
+              <div class="intro-img-wrapper slider-container">
+                <img src="photo jus et burger.PNG" alt="Smashed Burger" class="intro-img slider-img active">
+                <img src="PHOTO BURGER FOOD.PNG" alt="Burger Food" class="intro-img slider-img">
+                <img src="PHOTO CROISSANT FOOD.PNG" alt="Croissant Food" class="intro-img slider-img">
+              </div>
+            </div>
+
+            <!-- Story 3: BAKERY -->
+            <div class="story-item" data-slider>
+              <span class="story-category">BAKERY</span>
+              <div class="intro-img-wrapper slider-container">
+                <img src="BAKERY 1.PNG" alt="Bakery 1" class="intro-img slider-img active">
+                <img src="BAKERY 2.PNG" alt="Bakery 2" class="intro-img slider-img">
+                <img src="BAKERY 4.PNG" alt="Bakery 3" class="intro-img slider-img">
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- MENU LIST -->
+    <section id="menu" class="section menu-section">
+      <div class="container container--narrow">
+        <div class="menu-tabs">
+          <button class="menu-tab-btn active" data-category="hot-drinks">HOT DRINKS</button>
+          <button class="menu-tab-btn" data-category="cold-drinks">COLD DRINKS</button>
+          <button class="menu-tab-btn" data-category="food">FOOD</button>
+          <button class="menu-tab-btn" data-category="sweet-food">SWEET FOOD</button>
+        </div>
+
+        <div class="menu-content-wrapper">
+          <!-- HOT DRINKS -->
+          <div class="menu-category active" id="hot-drinks">
+            <ul class="menu-items">
+              <li class="menu-item">
+                <span class="item-name">EXPRESSO / ALLONGE</span>
+                <span class="item-dots"></span>
+                <span class="item-price">2</span>
+              </li>
+              <li class="menu-item">
+                <span class="item-name">LATTE</span>
+                <span class="item-dots"></span>
+                <span class="item-price">4</span>
+
+              </li>
+              <li class="menu-item">
+                <span class="item-name">CAPPUCINO</span>
+                <span class="item-dots"></span>
+                <span class="item-price">4,5</span>
+              </li>
+              <li class="menu-item">
+                <span class="item-name">CHOCOLAT CHAUD</span>
+                <span class="item-dots"></span>
+                <span class="item-price">4</span>
+              </li>
+              <li class="menu-item">
+                <span class="item-name">THE</span>
+                <span class="item-dots"></span>
+                <span class="item-price">4</span>
+              </li>
+              <li class="menu-item">
+                <span class="item-name">CHAI</span>
+                <span class="item-dots"></span>
+                <span class="item-price">5</span>
+              </li>
+              <li class="menu-item">
+                <span class="item-name">MATCHA</span>
+                <span class="item-dots"></span>
+                <span class="item-price">5,5</span>
+              </li>
+            </ul>
+          </div>
+
+          <!-- COLD DRINKS -->
+          <div class="menu-category" id="cold-drinks">
+            <ul class="menu-items">
+              <li class="menu-item">
+                <span class="item-name">ICE COFFEE</span>
+                <span class="item-dots"></span>
+                <span class="item-price">5</span>
+              </li>
+              <li class="menu-item">
+                <span class="item-name">ICE COFFEE LATTE</span>
+                <span class="item-dots"></span>
+                <span class="item-price">5</span>
+              </li>
+              <li class="menu-item">
+                <span class="item-name">ICE CAPPUCINO</span>
+                <span class="item-dots"></span>
+                <span class="item-price">6</span>
+              </li>
+              <li class="menu-item">
+                <span class="item-name">ICE CHAI</span>
+                <span class="item-dots"></span>
+                <span class="item-price">6</span>
+              </li>
+              <li class="menu-item">
+                <span class="item-name">ICE MATCHA</span>
+                <span class="item-dots"></span>
+                <span class="item-price">6</span>
+              </li>
+              <li class="menu-item">
+                <span class="item-name">MILK SHAKE</span>
+                <span class="item-dots"></span>
+                <span class="item-price">5.5</span>
+              </li>
+              <li class="menu-item">
+                <span class="item-name">THE GLACE</span>
+                <span class="item-dots"></span>
+                <span class="item-price">4</span>
+              </li>
+            </ul>
+          </div>
+
+          <!-- FOOD -->
+          <div class="menu-category" id="food">
+            <ul class="menu-items">
+              <li class="menu-item">
+                <div class="item-header">
+                  <span class="item-name">SMASHED BURGER</span>
+                  <span class="item-dots"></span>
+                  <span class="item-price">14</span>
+                </div>
+                <div class="item-desc">AVEC FRITES</div>
+              </li>
+              <li class="menu-item">
+                <div class="item-header">
+                  <span class="item-name">AVOCADO TOAST</span>
+                  <span class="item-dots"></span>
+                  <span class="item-price">13</span>
+                </div>
+                <div class="item-desc">AVEC OEUF AU PLAT</div>
+              </li>
+              <li class="menu-item">
+                <div class="item-header">
+                  <span class="item-name">SALTY PANCAKES</span>
+                  <span class="item-dots"></span>
+                  <span class="item-price">13</span>
+                </div>
+                <div class="item-desc">AVEC OEUF AU PLAT, CHEDDAR, BACON, SIROP D'ERABLE</div>
+              </li>
+              <li class="menu-item">
+                <div class="item-header">
+                  <span class="item-name">SOUPE</span>
+                  <span class="item-dots"></span>
+                  <span class="item-price">11</span>
+                </div>
+                <div class="item-desc">CAROTTE, BUTTERNUT, CROUTONS ET FROMAGE RAPE</div>
+              </li>
+            </ul>
+          </div>
+
+          <!-- SWEET FOOD -->
+          <div class="menu-category" id="sweet-food">
+            <ul class="menu-items">
+              <li class="menu-item">
+                <span class="item-name">COOKIES</span>
+                <span class="item-dots"></span>
+                <span class="item-price">3</span>
+              </li>
+              <li class="menu-item">
+                <span class="item-name">BANANA BREAD</span>
+                <span class="item-dots"></span>
+                <span class="item-price">3</span>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- EVENTS & MERCH -->
+    <section id="events-merch" class="section glass-section" style="padding-top: 20px; margin-top: -60px;">
+      <div class="container" style="max-width: 1400px;">
+        <div class="menu-grid" style="gap: 100px;">
+          <!-- Merch Block -->
+          <div id="merch" class="info-block merch-block" style="text-align: center; padding: 40px;">
+            <img src="logo tee shirt.png" alt="T-shirts Logo"
+              style="width: 100%; max-width: 900px; height: 350px; object-fit: contain; margin: 0 auto 20px; display: block; filter: brightness(0) invert(1);">
+            <img src="logo-tshirt.png" alt="T-shirts Single Fin"
+              style="width: 100%; max-width: 600px; margin: 0 auto; display: block; filter: brightness(0) invert(1); opacity: 0.9;">
+            <p
+              style="font-family: var(--font-display); font-size: 50px; font-weight: 700; letter-spacing: 0.1em; color: var(--text-light); margin-top: 20px;">
+              30 €</p>
+          </div>
+
+          <!-- Events Block -->
+          <div id="events" class="info-block events-block" style="text-align: center; padding: 40px;">
+            <img src="logo evement a venir.png" alt="Evenement Logo"
+              style="width: 100%; max-width: 900px; height: 350px; object-fit: contain; margin: 0 auto 20px; display: block; filter: brightness(0) invert(1);">
+            <div style="margin-top: 50px; display: flex; flex-direction: column; gap: 30px;">
+              <div
+                style="border: 1px solid rgba(253, 251, 247, 0.2); padding: 80px; border-radius: 30px; background: rgba(253, 251, 247, 0.03);">
+                <h3
+                  style="font-family: var(--font-display); font-size: 36px; color: var(--text-light); margin-bottom: 15px;">
+                  SOIRÉE CONCERT LIVE</h3>
+                <p style="font-size: 24px; opacity: 0.7; color: var(--highlight);">Tous les Vendredis - 19h00</p>
+                <p style="font-size: 20px; opacity: 0.5; margin-top: 25px;">Ambiance acoustique, tapas et sunset.</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+
+  </main>
+
+  <div class="footer-bg-wrapper">
+    <!-- CONTACT FORM CARD -->
+    <section id="contact" class="section contact-section">
+      <div class="contact-card">
+        <p class="card-subtitle">Appelez-nous pour commandez on s'occupe de tout. The ocean is waiting.</p>
+
+        <div class="contact-actions">
+          <a class="contact-link" href="tel:+33546857809">Appelez 05 46 85 78 09</a>
+          <a class="contact-link"
+            href="https://www.google.com/maps/dir//Single+Fin+Coffee,+19+rue+de+Cognac,+17200+Royan/"
+            target="_blank">Localisation</a>
+        </div>
+
+        <div class="info-grid" style="margin-top: 60px; width: 100%; max-width: 1000px;">
+          <div class="info-block">
+            <h3>ADRESSE</h3>
+            <p>19, rue de Cognac<br>17200 Royan</p>
+          </div>
+          <div class="info-block">
+            <h3>HORAIRES</h3>
+            <p>Lundi - Dimanche : 09:00 – 18:00<br>Mardi: Fermé</p>
+          </div>
+          <div class="info-block">
+            <h3>PAIEMENTS</h3>
+            <p>Cartes / Espèces</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <footer class="footer">
+      <div class="container footer__inner">
+        <div class="footer-links">
+          <a href="#menu">Menu</a>
+          <a href="#infos">Infos</a>
+          <a href="#contact">Contact</a>
+        </div>
+        <p class="copyright">© <span id="year"></span> Single Fin Pontaillac. <span class="muted">Where eating is out of
+            this world.</span></p>
+      </div>
+    </footer>
+  </div>
+
+  <script src="./script.js"></script>
+  <script>
+    document.getElementById("year").textContent = new Date().getFullYear();
+  </script>
+</body>
+
+</html>
