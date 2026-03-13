@@ -9,7 +9,8 @@
     content="Single Fin : street food, poke bowls, bagels, fajitas. Menu en photos, infos, horaires, contact." />
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500&family=Tenor+Sans&display=swap"
+  <link
+    href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500&family=Playfair+Display:ital,wght@0,400;0,700;1,400;1,700&family=Tenor+Sans&display=swap"
     rel="stylesheet" />
   <link rel="stylesheet" href="./styles.css" />
   <link rel="icon" href="logo-single.ico" />
@@ -19,6 +20,9 @@
 
   <!-- Background Canvas (Dark Starfield) -->
   <div class="hero-bg-canvas">
+    <video autoplay muted loop playsinline class="hero-bg-video">
+      <source src="vecteezy_bali-indonesia-july-18th-2025-surfing-on_68278011.mp4" type="video/mp4">
+    </video>
   </div>
 
   <header class="header">
@@ -32,9 +36,9 @@
         <nav id="mobileNav" class="mobile-nav">
           <ul class="mobile-nav__list">
             <li><a href="#menu" class="mobile-nav__link">I. MENU</a></li>
-            <li><a href="#events" class="mobile-nav__link">II. EVENEMENT A VENIR</a></li>
-            <li><a href="#contact" class="mobile-nav__link">III. LOCALISATION</a></li>
-            <li><a href="#merch" class="mobile-nav__link">IV. VETEMENTS</a></li>
+
+            <li><a href="#contact" class="mobile-nav__link">II. LOCALISATION</a></li>
+
           </ul>
         </nav>
       </div>
@@ -50,7 +54,7 @@
           target="_blank">SURF CAM</a>
         <a class="nav-contact" href="https://www.surf-report.com/meteo-surf/royan-pontaillac-s1075.html"
           target="_blank">SURF PREVISION</a>
-        <a class="nav-contact" href="#contact">CONTACT US</a>
+        <a class="nav-contact" href="#contact">CONTACTEZ NOUS</a>
       </div>
     </div>
   </header>
@@ -61,10 +65,12 @@
       <div class="container">
         <div class="hero__content">
           <h1 class="hero__title">
-            <span class="line1">Street Foods </span>
-            <span class="line2">Surfer's Vibes</span>
-            <span class="line3">Coffee / Bakery</span>
+
           </h1>
+          <div class="hero__secondary-text">
+            <span>Real food this way.</span>
+            <span>Welcome in.</span>
+          </div>
         </div>
       </div>
     </section>
@@ -84,40 +90,21 @@
 
     <!-- INTRO SECTION -->
     <section id="about" class="section intro-section">
-      <div class="container">
-        <div class="intro-centered-content">
-          <img src="good-food-good-vibes-transparent (2).png" alt="Good Food Good Vibes" class="intro-title-img">
-          <div class="stories-slider">
-            <!-- Story 1: DRINK -->
-            <div class="story-item" data-slider>
-              <span class="story-category">DRINK</span>
-              <div class="intro-img-wrapper slider-container">
-                <img src="photo café.png" alt="Latte" class="intro-img slider-img active">
-                <img src="burger_bowl.png" alt="Burger Bowl" class="intro-img slider-img">
-                <img src="café mauve.PNG" alt="Mauve Coffee" class="intro-img slider-img">
-              </div>
-            </div>
+      <div class="intro-centered-wrapper">
+        <!-- Scattered images around the text -->
+        <div class="scatter-img scatter-img--1 reveal"><img src="photo café.png" alt="Coffee"></div>
+        <div class="scatter-img scatter-img--2 reveal"><img src="BAKERY 1.PNG" alt="Bakery"></div>
+        <div class="scatter-img scatter-img--3 reveal"><img src="photo jus et burger.PNG" alt="Drink"></div>
+        <div class="scatter-img scatter-img--4 reveal"><img src="PHOTO BURGER FOOD.PNG" alt="Burger"></div>
+        <div class="scatter-img scatter-img--5 reveal"><img src="burger et avocado.PNG" alt="Food"></div>
+        <div class="scatter-img scatter-img--6 reveal"><img src="BAKERY 4.PNG" alt="Bakery"></div>
 
-            <!-- Story 2: FOOD -->
-            <div class="story-item" data-slider>
-              <span class="story-category">FOOD</span>
-              <div class="intro-img-wrapper slider-container">
-                <img src="photo jus et burger.PNG" alt="Smashed Burger" class="intro-img slider-img active">
-                <img src="PHOTO BURGER FOOD.PNG" alt="Burger Food" class="intro-img slider-img">
-                <img src="PHOTO CROISSANT FOOD.PNG" alt="Croissant Food" class="intro-img slider-img">
-              </div>
-            </div>
-
-            <!-- Story 3: BAKERY -->
-            <div class="story-item" data-slider>
-              <span class="story-category">BAKERY</span>
-              <div class="intro-img-wrapper slider-container">
-                <img src="BAKERY 1.PNG" alt="Bakery 1" class="intro-img slider-img active">
-                <img src="BAKERY 2.PNG" alt="Bakery 2" class="intro-img slider-img">
-                <img src="BAKERY 4.PNG" alt="Bakery 3" class="intro-img slider-img">
-              </div>
-            </div>
-          </div>
+        <!-- Centered text -->
+        <div class="intro-text-center">
+          <h2 class="intro-display-title reveal"><span class="title-line-1">Good Food</span><span
+              class="title-line-2">Good Vibes</span></h2>
+          <p class="intro-description reveal">De la street food de qualité, des produits frais et locaux, des saveurs
+            du monde entier, le tout dans une ambiance conviviale et décontractée.</p>
         </div>
       </div>
     </section>
@@ -273,48 +260,17 @@
       </div>
     </section>
 
-    <!-- EVENTS & MERCH -->
-    <section id="events-merch" class="section glass-section" style="padding-top: 20px; margin-top: -60px;">
-      <div class="container" style="max-width: 1400px;">
-        <div class="menu-grid" style="gap: 100px;">
-          <!-- Merch Block -->
-          <div id="merch" class="info-block merch-block" style="text-align: center; padding: 40px;">
-            <img src="logo tee shirt.png" alt="T-shirts Logo"
-              style="width: 100%; max-width: 900px; height: 350px; object-fit: contain; margin: 0 auto 20px; display: block; filter: brightness(0) invert(1);">
-            <img src="logo-tshirt.png" alt="T-shirts Single Fin"
-              style="width: 100%; max-width: 600px; margin: 0 auto; display: block; filter: brightness(0) invert(1); opacity: 0.9;">
-            <p
-              style="font-family: var(--font-display); font-size: 50px; font-weight: 700; letter-spacing: 0.1em; color: var(--text-light); margin-top: 20px;">
-              30 €</p>
-          </div>
-
-          <!-- Events Block -->
-          <div id="events" class="info-block events-block" style="text-align: center; padding: 40px;">
-            <img src="logo evement a venir.png" alt="Evenement Logo"
-              style="width: 100%; max-width: 900px; height: 350px; object-fit: contain; margin: 0 auto 20px; display: block; filter: brightness(0) invert(1);">
-            <div style="margin-top: 50px; display: flex; flex-direction: column; gap: 30px;">
-              <div
-                style="border: 1px solid rgba(253, 251, 247, 0.2); padding: 80px; border-radius: 30px; background: rgba(253, 251, 247, 0.03);">
-                <h3
-                  style="font-family: var(--font-display); font-size: 36px; color: var(--text-light); margin-bottom: 15px;">
-                  SOIRÉE CONCERT LIVE</h3>
-                <p style="font-size: 24px; opacity: 0.7; color: var(--highlight);">Tous les Vendredis - 19h00</p>
-                <p style="font-size: 20px; opacity: 0.5; margin-top: 25px;">Ambiance acoustique, tapas et sunset.</p>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-    </section>
 
 
   </main>
 
   <div class="footer-bg-wrapper">
+    <img src="Fond intérieur single.png" alt="Cafe Interior" class="footer-bg-media">
+    <div class="video-overlay"></div>
     <!-- CONTACT FORM CARD -->
     <section id="contact" class="section contact-section">
       <div class="contact-card">
-        <p class="card-subtitle">Appelez-nous pour commandez on s'occupe de tout. The ocean is waiting.</p>
+        <p class="card-subtitle">Appelez-nous pour commandez on s'occupe de tout.</p>
 
         <div class="contact-actions">
           <a class="contact-link" href="tel:+33546857809">Appelez 05 46 85 78 09</a>
@@ -323,18 +279,35 @@
             target="_blank">Localisation</a>
         </div>
 
-        <div class="info-grid" style="margin-top: 60px; width: 100%; max-width: 1000px;">
+        <div class="info-grid" style="margin-top: 60px; width: 100%; max-width: 1200px;">
           <div class="info-block">
             <h3>ADRESSE</h3>
             <p>19, rue de Cognac<br>17200 Royan</p>
           </div>
           <div class="info-block">
             <h3>HORAIRES</h3>
-            <p>Lundi - Dimanche : 09:00 – 18:00<br>Mardi: Fermé</p>
+            <p>Lundi - Dimanche :<br>09:00 – 18:00<br>Mardi: Fermé</p>
           </div>
           <div class="info-block">
             <h3>PAIEMENTS</h3>
             <p>Cartes / Espèces</p>
+          </div>
+          <div class="info-block">
+            <h3>REJOIGNEZ NOUS</h3>
+            <div class="social-links" style="display: flex; gap: 20px; margin-top: 10px;">
+              <a href="https://www.instagram.com/singlefin.ponta/" target="_blank" class="social-icon"
+                aria-label="Instagram" style="display: flex; align-items: center; gap: 12px; text-decoration: none;">
+
+                <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+                  stroke-linecap="round" stroke-linejoin="round" class="feather feather-instagram">
+                  <rect x="2" y="2" width="20" height="20" rx="5" ry="5"></rect>
+                  <path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"></path>
+                  <line x1="17.5" y1="6.5" x2="17.51" y2="6.5"></line>
+                </svg>
+                <span style="font-size: 18px; font-weight: 700; font-family: 'Inter', sans-serif;">Single Fin
+                  Coffee</span>
+              </a>
+            </div>
           </div>
         </div>
       </div>
@@ -343,9 +316,7 @@
     <footer class="footer">
       <div class="container footer__inner">
         <div class="footer-links">
-          <a href="#menu">Menu</a>
-          <a href="#infos">Infos</a>
-          <a href="#contact">Contact</a>
+
         </div>
         <p class="copyright">© <span id="year"></span> Single Fin Pontaillac. <span class="muted">Where eating is out of
             this world.</span></p>

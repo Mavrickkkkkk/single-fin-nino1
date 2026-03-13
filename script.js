@@ -89,16 +89,6 @@ function initSliders() {
   });
 }
 
-if (document.readyState === "loading") {
-  document.addEventListener("DOMContentLoaded", () => {
-    initMenuTabs();
-    initSliders();
-  });
-} else {
-  initMenuTabs();
-  initSliders();
-}
-
 // Scroll doux pour ancres + ferme le menu mobile
 document.querySelectorAll('a[href^="#"]').forEach((link) => {
   link.addEventListener("click", (e) => {
@@ -115,7 +105,6 @@ document.querySelectorAll('a[href^="#"]').forEach((link) => {
 });
 
 // Modal simple pour zoom sur les images de menu
-// -> Mets class="menu-photo" sur les <img> à zoomer
 function createModal() {
   const overlay = document.createElement("div");
   overlay.id = "imgModal";
@@ -169,20 +158,66 @@ window.addEventListener("scroll", () => {
   const line3 = document.querySelector(".hero__title .line3");
 
   if (line1) {
-    // S'écarte beaucoup plus vite vers la gauche
     line1.style.transform = `translateX(-${scroll * 1.2}px)`;
     line1.style.opacity = 1 - scroll / 400;
   }
   if (line2) {
-    // S'écarte beaucoup plus vite vers la droite
     line2.style.transform = `translateX(${scroll * 0.8}px)`;
     line2.style.opacity = 1 - scroll / 450;
   }
   if (line3) {
-    // S'écarte beaucoup plus vite vers la gauche
     line3.style.transform = `translateX(-${scroll * 1.6}px)`;
     line3.style.opacity = 1 - scroll / 500;
   }
 });
 
+// --- Header Scroll Strategy (Hide on down, Show on up) ---
+let lastScrollTop = 0;
+const header = document.querySelector('.header');
+const scrollThreshold = 100;
 
+window.addEventListener('scroll', () => {
+  const currentScroll = window.pageYOffset || document.documentElement.scrollTop;
+  
+  if (currentScroll > lastScrollTop && currentScroll > scrollThreshold) {
+    header.classList.add('header--hidden');
+  } else {
+    header.classList.remove('header--hidden');
+  }
+  
+  lastScrollTop = Math.max(0, currentScroll);
+});
+
+// --- Reveal Animation on Scroll ---
+function initReveal() {
+  const observerOptions = {
+    threshold: 0.01, // Very low threshold to ensure it triggers
+    rootMargin: '0px 0px -10px 0px'
+  };
+
+  const observer = new IntersectionObserver((entries) => {
+    entries.forEach((entry) => {
+      if (entry.isIntersecting) {
+        entry.target.classList.add('reveal--active');
+        observer.unobserve(entry.target);
+      }
+    });
+  }, observerOptions);
+
+  document.querySelectorAll('.reveal').forEach((el) => {
+    observer.observe(el);
+  });
+}
+
+// Initialization
+function init() {
+  initMenuTabs();
+  initSliders();
+  initReveal();
+}
+
+if (document.readyState === "loading") {
+  document.addEventListener("DOMContentLoaded", init);
+} else {
+  init();
+}
